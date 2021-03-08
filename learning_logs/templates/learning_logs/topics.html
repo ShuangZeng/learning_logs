@@ -7,7 +7,10 @@
     <ul>
         {% for topic in topics%}
         <!--        变量名双花括号-->
-        <li>{{topic}}</li>
+        <li>
+            <a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a>
+        </li>
+<!--        <li>{{topic}}</li>-->
         <!--        列表为空时怎么办-->
         {% empty %}
         <li>No topics have been added yet.</li>
